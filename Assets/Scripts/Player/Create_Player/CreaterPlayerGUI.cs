@@ -41,6 +41,9 @@ public class CreaterPlayerGUI : MonoBehaviour
 
 	void OnGUI(){
 		displayFunctions.DisplayMainItems();
+		if(GUI.Button(new Rect(Screen.width/5*4,Screen.height/4*3,100,50), "Cancel")){
+			Application.LoadLevel("Main_Menu");
+		}
 
 		//Turns the player
 		Transform player = GameObject.FindGameObjectWithTag("Player").transform;
