@@ -8,8 +8,10 @@ public class DisplayUserStatus : MonoBehaviour {
 	private static LevelUp levelUpScript = new LevelUp();
 	public Scrollbar XP_Bar;
 	public Scrollbar Health_Bar;
+	public Scrollbar PlayerHealth_Bar;
 	public float XpValue{get;set;}
 	public float EnemyHealthValue{get;set;}
+	public float PlayerHealthValue{ get; set; }
 	public CreateItem itemcreater = new CreateItem ();
 
 
@@ -74,5 +76,7 @@ public class DisplayUserStatus : MonoBehaviour {
 		XP_Bar.size = XpValue;
 		EnemyHealthValue =((float)CreateEnemy.curEnemy.curHealth / CreateEnemy.curEnemy.Health);
 		Health_Bar.size = EnemyHealthValue;
+		PlayerHealthValue = ((float)GameInformation.curHealth / GameInformation.Health);
+		PlayerHealth_Bar.size = PlayerHealthValue;
 		}
 	}
