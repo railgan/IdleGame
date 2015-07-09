@@ -157,8 +157,21 @@ public class DisplayCreatePlayerFunction : MonoBehaviour
 		}
 		characterName = GUI.TextField(new Rect(350,350,150,50), characterName);
 		FindFinalStats();
+
+		//Checks if Character has a Name
 		if(characterName != "Name"){
-		if(GUI.Button(new Rect(Screen.width/2-100,Screen.height/4*3,100,50), "Done")){
+		//Done Button
+			if (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Return){
+				FinishCreation();
+			}
+			if (GUI.Button(new Rect(Screen.width/2-100,Screen.height/4*3,100,50), "Done")){
+				FinishCreation();
+			
+		}
+	}
+
+	}
+		public void FinishCreation(){
 			GameInformation.PlayerLevel = 1;
 			GameInformation.RequiredXP = 1000;
 			GameInformation.CurrentXP = 0;
@@ -166,12 +179,6 @@ public class DisplayCreatePlayerFunction : MonoBehaviour
 			SaveInformation.SaveAllInformation();
 			Application.LoadLevel("Main_Menu");
 		}
-	}
-
-	}
-
-
-
 	public void DisplayMainItems() {
 		var centeredStyle = GUI.skin.GetStyle("Label");
 		centeredStyle.alignment = TextAnchor.UpperCenter;
