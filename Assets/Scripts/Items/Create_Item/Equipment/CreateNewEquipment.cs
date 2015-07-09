@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CreateNewEquipment : MonoBehaviour
+public class CreateNewEquipment
 {
 	public BaseEquipment newEquipment;
 	public string[] itemNames = new string[4]{"Common", "Great", "Amazing", "Insane"};
@@ -26,7 +26,8 @@ public class CreateNewEquipment : MonoBehaviour
 	}
 
 	public void ChooseItemType(){
-		int randomTemp = Random.Range (1,10);
+		int randomTemp = 1;
+	//	int randomTemp = Random.Range (1,10);
 		if(randomTemp == 1){
 			newEquipment.EquipmentType = BaseEquipment.EquipmentTypes.HEAD;
 		}else if(randomTemp == 2){

@@ -2,12 +2,15 @@
 using UnityEngine.UI;
 using System.Collections;
 
+//Todo: Enemy Attackspeed Calculation doesn't change upon loading of new Enemy???
+
 public class DisplayUserStatus : MonoBehaviour {
 	private static LevelUp levelUpScript = new LevelUp();
 	public Scrollbar XP_Bar;
 	public Scrollbar Health_Bar;
 	public float XpValue{get;set;}
 	public float EnemyHealthValue{get;set;}
+	public CreateItem itemcreater = new CreateItem ();
 
 
 	public void Start() {
@@ -15,7 +18,6 @@ public class DisplayUserStatus : MonoBehaviour {
 			GameInformation.RequiredXP = 1000;
 		}
 		CreateEnemy.CreateNewEnemy();
-		//GameInformation.Damage = 15;
 		DealDamage();
 	}
 
@@ -27,7 +29,9 @@ public class DisplayUserStatus : MonoBehaviour {
 		GUILayout.Label("Current XP:" +GameInformation.CurrentXP + "\n" + "Required XP:" +GameInformation.RequiredXP + "\n" + "Level: " + 
 		                GameInformation.PlayerLevel +  "\n"  + "Player Health: " + GameInformation.curHealth + "\n" + "Damage: " + GameInformation.Damage + "\n" + "Enemy Health: " + CreateEnemy.curEnemy.curHealth
 		                + " of "  + CreateEnemy.curEnemy.Health   +  "\n" + "Current Enemy: " + CreateEnemy.curEnemy.EnemyName + 
-		                "\n" + "Available Statpoints: " + GameInformation.AvailableStatPoints);
+		                "\n" + "Available Statpoints: " + GameInformation.AvailableStatPoints
+		              //  + "\n" + "Head: "+ GameInformation.EquipmentHead.ItemName
+		                );
 		          
 	}
 
@@ -50,8 +54,9 @@ public class DisplayUserStatus : MonoBehaviour {
 	//Checks if Enemy is still alive
 	public void CheckEnemyHealth()
 	{ if(CreateEnemy.curEnemy.curHealth<= 0){
-	//		GameInformation.curHealth  = GameInformation.Health; // makes it so the player can't die
+	GameInformation.curHealth  = GameInformation.Health; // makes it so the player can't die
 			IncreaseExperience.AddExperience();
+			itemcreater.CreateEquipment();
 			CreateEnemy.CreateNewEnemy();
 		}
 	}

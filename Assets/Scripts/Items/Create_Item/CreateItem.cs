@@ -15,18 +15,28 @@ public class CreateItem
 
 
 
-	public void CreateAItem(int ItemSelection){
-		if (ItemSelection == 1){
-			anEquipment = newEquipment.CreateEquipment();
-		} else if (ItemSelection == 2){
-			aWeapon =newWeapon.CreateWeapon();
-		} else if (ItemSelection == 3){
-			aPotion =newPotion.CreatePotion();
-		} else if (ItemSelection == 4){
-			aScroll =	newScroll.CreateScroll();
-		} 
+	public BaseItem CreateAItem(int ItemSelection){
+		if (ItemSelection == 1) {
+			anEquipment = newEquipment.CreateEquipment ();
+			return anEquipment;
+		} else if (ItemSelection == 2) {
+			aWeapon = newWeapon.CreateWeapon ();
+			return aWeapon;
+		} else if (ItemSelection == 3) {
+			aPotion = newPotion.CreatePotion ();
+			return aPotion;
+		} else if (ItemSelection == 4) {
+			aScroll = newScroll.CreateScroll ();
+			return aScroll;
+		} else {
+			anEquipment = newEquipment.CreateEquipment ();
+			return anEquipment;
+		}
 		
-		
+	}
+	public BaseEquipment CreateEquipment(){
+		anEquipment = newEquipment.CreateEquipment ();
+		return anEquipment;
 	}
 }
 
