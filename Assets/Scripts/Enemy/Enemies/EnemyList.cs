@@ -20,21 +20,21 @@ public class EnemyList : BaseEnemy
 			newEnemy.EnemyDescription = "It's Bugged";
 			newEnemy.XpToGive = 10;
 			newEnemy.GoldToGive = 10;
-			newEnemy.Stamina = 100;
-			newEnemy.Vitality = 100;
-			newEnemy.Armor = 100;
-			newEnemy.Strength = 100;
-			newEnemy.Intellect = 100;
-			newEnemy.Dexterity = 100;
+			newEnemy.Stamina = 5;
+			newEnemy.Vitality = 5;
+			newEnemy.Armor = 5;
+			newEnemy.Strength = 5;
+			newEnemy.Intellect = 5;
+			newEnemy.Dexterity = 5;
 			setEnemyStats();
 			return newEnemy;
 
 		}else if (enemySelection == 1){
 			newEnemy.EnemyName = "Enemy1";
 			newEnemy.EnemyDescription = "A Weak Individual";
-			newEnemy.XpToGive = 100;
+			newEnemy.XpToGive = 5;
 			newEnemy.GoldToGive = 10;
-			newEnemy.Stamina = 100;
+			newEnemy.Stamina = 5;
 			newEnemy.Vitality = 25;
 			newEnemy.Armor = 5;
 			newEnemy.Strength = 13;
@@ -48,12 +48,12 @@ public class EnemyList : BaseEnemy
 			newEnemy.EnemyDescription = "A Weak Individual";
 			newEnemy.XpToGive = 25;
 			newEnemy.GoldToGive = 10;
-			newEnemy.Stamina = 100;
-			newEnemy.Vitality = 450;
-			newEnemy.Armor = 100;
-			newEnemy.Strength = 100;
-			newEnemy.Intellect = 100;
-			newEnemy.Dexterity = 100;
+			newEnemy.Stamina = 5;
+			newEnemy.Vitality = 50;
+			newEnemy.Armor = 5;
+			newEnemy.Strength = 5;
+			newEnemy.Intellect = 5;
+			newEnemy.Dexterity = 5;
 			 setEnemyStats();
 			return newEnemy;
 		}else if (enemySelection == 3){
@@ -61,12 +61,12 @@ public class EnemyList : BaseEnemy
 			newEnemy.EnemyDescription = "A Weak Individual";
 			newEnemy.XpToGive = 10;
 			newEnemy.GoldToGive = 10;
-			newEnemy.Stamina = 100;
-			newEnemy.Vitality = 100;
-			newEnemy.Armor = 100;
-			newEnemy.Strength = 100;
-			newEnemy.Intellect = 100;
-			newEnemy.Dexterity = 100;
+			newEnemy.Stamina = 5;
+			newEnemy.Vitality = 5;
+			newEnemy.Armor = 5;
+			newEnemy.Strength = 5;
+			newEnemy.Intellect = 5;
+			newEnemy.Dexterity = 5;
 			 setEnemyStats();
 			return newEnemy;
 
@@ -75,12 +75,12 @@ public class EnemyList : BaseEnemy
 			newEnemy.EnemyDescription = "A Weak Individual";
 			newEnemy.XpToGive = 10;
 			newEnemy.GoldToGive = 10;
-			newEnemy.Stamina = 100;
-			newEnemy.Vitality = 100;
-			newEnemy.Armor = 100;
-			newEnemy.Strength = 100;
-			newEnemy.Intellect = 100;
-			newEnemy.Dexterity = 100;
+			newEnemy.Stamina = 5;
+			newEnemy.Vitality = 5;
+			newEnemy.Armor = 5;
+			newEnemy.Strength = 5;
+			newEnemy.Intellect = 5;
+			newEnemy.Dexterity = 5;
 			 setEnemyStats();
 			return newEnemy;
 
@@ -89,12 +89,12 @@ public class EnemyList : BaseEnemy
 			newEnemy.EnemyDescription = "A Weak Individual";
 			newEnemy.XpToGive = 10;
 			newEnemy.GoldToGive = 10;
-			newEnemy.Stamina = 100;
-			newEnemy.Vitality = 100;
-			newEnemy.Armor = 100;
-			newEnemy.Strength = 100;
-			newEnemy.Intellect = 100;
-			newEnemy.Dexterity = 100;
+			newEnemy.Stamina = 5;
+			newEnemy.Vitality = 5;
+			newEnemy.Armor = 5;
+			newEnemy.Strength = 5;
+			newEnemy.Intellect = 5;
+			newEnemy.Dexterity = 5;
 			 setEnemyStats();
 			return newEnemy;
 
@@ -103,12 +103,12 @@ public class EnemyList : BaseEnemy
 			newEnemy.EnemyDescription = "A Weak Individual";
 			newEnemy.XpToGive = 10;
 			newEnemy.GoldToGive = 10;
-			newEnemy.Stamina = 100;
-			newEnemy.Vitality = 100;
-			newEnemy.Armor = 100;
-			newEnemy.Strength = 100;
-			newEnemy.Intellect = 100;
-			newEnemy.Dexterity = 100;
+			newEnemy.Stamina = 5;
+			newEnemy.Vitality = 5;
+			newEnemy.Armor = 5;
+			newEnemy.Strength = 5;
+			newEnemy.Intellect = 5;
+			newEnemy.Dexterity = 5;
 			 setEnemyStats();
 			return newEnemy;
 		} else {return ChooseEnemy(0);

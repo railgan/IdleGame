@@ -25,7 +25,7 @@ public class DisplayUserStatus : MonoBehaviour {
 			SaveInformation.SaveAllInformation();
 		}
 		GUILayout.Label("Current XP:" +GameInformation.CurrentXP + "\n" + "Required XP:" +GameInformation.RequiredXP + "\n" + "Level: " + 
-		                GameInformation.PlayerLevel +  "\n" + "Damage: " + GameInformation.Damage + "\n" + "Enemy Health: " + CreateEnemy.curEnemy.curHealth
+		                GameInformation.PlayerLevel +  "\n"  + "Player Health: " + GameInformation.curHealth + "\n" + "Damage: " + GameInformation.Damage + "\n" + "Enemy Health: " + CreateEnemy.curEnemy.curHealth
 		                + " of "  + CreateEnemy.curEnemy.Health   +  "\n" + "Current Enemy: " + CreateEnemy.curEnemy.EnemyName + 
 		                "\n" + "Available Statpoints: " + GameInformation.AvailableStatPoints);
 		          
@@ -36,15 +36,29 @@ public class DisplayUserStatus : MonoBehaviour {
 		CreateEnemy.curEnemy.curHealth -= GameInformation.Damage;
 		CheckEnemyHealth();
 	}
+	//Deals Damage to the Player
+	public void EnemyDmgCalculation(){
+		GameInformation.curHealth -= CreateEnemy.curEnemy.Damage;
+		CheckPlayerHealth ();
+	}
+	//Calls the Damage Functions
 	public  void DealDamage(){
 		InvokeRepeating("DmgCalculation",1,1.0f/GameInformation.Speed);
+		InvokeRepeating ("EnemyDmgCalculation", 1, 1.0f / CreateEnemy.curEnemy.Speed);
 	}
 
 	//Checks if Enemy is still alive
 	public void CheckEnemyHealth()
 	{ if(CreateEnemy.curEnemy.curHealth<= 0){
+	//		GameInformation.curHealth  = GameInformation.Health; // makes it so the player can't die
 			IncreaseExperience.AddExperience();
 			CreateEnemy.CreateNewEnemy();
+		}
+	}
+	//Checks if Player is still alive
+	public void CheckPlayerHealth(){
+		if (GameInformation.curHealth <= 0) {
+			Application.LoadLevel ("Main_Menu");
 		}
 	}
 

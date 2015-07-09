@@ -16,6 +16,8 @@ public class BaseCharacter : MonoBehaviour
 	public int Intellect{get;set;}
 	public int Dexterity{get;set;}
 	public int Damage{get;set;}
+	public int AttackValue{ get; set; }
+	public int Attack{ get; set; }
 
 	public void	setStats(){
 		GameInformation.Vitality = Vitality;
