@@ -46,10 +46,10 @@ public class EnemyList : BaseEnemy
 		}else if (enemySelection == 2){
 			newEnemy.EnemyName = "Enemy2";
 			newEnemy.EnemyDescription = "A Weak Individual";
-			newEnemy.XpToGive = 10;
+			newEnemy.XpToGive = 25;
 			newEnemy.GoldToGive = 10;
 			newEnemy.Stamina = 100;
-			newEnemy.Vitality = 100;
+			newEnemy.Vitality = 450;
 			newEnemy.Armor = 100;
 			newEnemy.Strength = 100;
 			newEnemy.Intellect = 100;
