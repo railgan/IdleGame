@@ -551,6 +551,7 @@ GameObject:
   - 222: {fileID: 845516394}
   - 114: {fileID: 845516393}
   - 114: {fileID: 845516392}
+  - 225: {fileID: 845516391}
   m_Layer: 5
   m_Name: StatButton
   m_TagString: Untagged
@@ -576,6 +577,17 @@ RectTransform:
   m_AnchoredPosition: {x: -47.9399986, y: 299}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!225 &845516391
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 845516389}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &845516392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,7 +1265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793ecddd54728224fb5e6c0915a0ce2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasButton: {fileID: 845516389}
+  canvasButton: {fileID: 845516392}
 --- !u!1 &1502247790
 GameObject:
   m_ObjectHideFlags: 0

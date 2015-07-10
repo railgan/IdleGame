@@ -24,13 +24,7 @@ public class DisplayUserStatus : MonoBehaviour {
 	}
 
 	public void OnGUI() { 
-		//DIsplay Stat Allocation
-	/*	if (GameInformation.AvailableStatPoints > 0) {
-			if (GUI.Button (new Rect (Screen.width / 2 - 50, Screen.height / 6, 100, 50), "Stat Allocaiton")) {
-				// to be added
-			}
-		}
-		*/ // not needed currently...
+
 		if(GUI.Button(new Rect(Screen.width/2-75,Screen.height/10*9,150,50), "Back")){
 			Application.LoadLevel("Main_Menu");
 			SaveInformation.SaveAllInformation();
